@@ -15,7 +15,10 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 // Routes
 const queryRoutes = require('./src/routes/queryRoutes');
+const trakteerRoutes = require('./src/routes/trakteerRoutes');
+
 app.use('/api', queryRoutes);
+app.use('/api', trakteerRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
