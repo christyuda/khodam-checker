@@ -3,13 +3,12 @@ const mongoose = require('mongoose');
 const cors = require('cors'); // Import cors
 
 require('dotenv').config();
-app.use(cors());
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 
 const corsOptions = {
-    origin: 'https://khodamku.github.io/', // Replace with your frontend URL
+    origin: '*', // Replace with your frontend URL
     optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
 // Middleware
