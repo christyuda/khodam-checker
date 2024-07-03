@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
     .catch(err => console.log('MongoDB connection error:', err));
 
 // Routes
-const queryRoutes = require('./routes/queryRoutes');
+const queryRoutes = require('./src/routes/queryRoutes');
 app.use('/api', queryRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
