@@ -7,7 +7,13 @@ app.use(cors());
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+const corsOptions = {
+    origin: 'https://khodamku.github.io/', // Replace with your frontend URL
+    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+};
 // Middleware
+app.use(cors(corsOptions));
 app.use(express.json()); // For parsing application/json
 
 // MongoDB connection
